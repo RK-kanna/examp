@@ -1,4 +1,4 @@
-const product = [
+const list = [
   {
       id: 1,
       title: "Ginger (1KG)",
@@ -36,4 +36,4 @@ const product = [
   },
 
 ];
-export default product;
+export default list;

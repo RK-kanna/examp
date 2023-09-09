@@ -1,31 +1,35 @@
-import React, { useState } from "react";
-import Search from './search';
-import './herbs.css';
-import product from './data2';
+import React,{useState} from "react";
+import list from './data2';
+import Cards from './cards'
+import Search from "./search";
+import './fruits.css';
 
-function Herbs() {
-  const [cart, setCart] = useState([]);
 
-  const addtocart = (product) => {
-    setCart([...cart, product]);
-  }
-
-  return (
-    <div>
-      <Search cart={cart} />
-      <h1 className="txt-herb">Herbs</h1>
-      {product.map((productItem => 
-        <div className="herbs-display" key={productItem.id}>
-          <img style={{ width: 200 }} src={productItem.img} alt={productItem.title} />
-          <h3>{productItem.title}</h3>
-          <h3>{productItem.price}</h3>
-          <div className="but">
-            <button onClick={() => addtocart(productItem)}>Add to cart</button>
-          </div>
+function Herbs (){
+    const [show,setShow] = useState(true);
+    const [cart , setCart] = useState([]);
+    const handleclick = (item)=>{
+        let isPresent = false;
+        cart.forEach((product)=>{
+            if (item.id === product.id)
+            isPresent = true;
+        })
+        if (isPresent){
+            return ;
+        }
+        setCart([...cart, item]);
+    }
+    
+    return(
+        <div>
+            <Search size={cart.length}/>
+            <h3 style={{textAlign:"center",marginTop:50,fontSize:50 }}>Fruits</h3>
+        <section>
+            {list.map((item) =>(
+                <Cards key={list.id} item={item} handleclick={handleclick} />
+            ))}
+        </section>
         </div>
-      ))}
-    </div>
-  )
+    )
 }
-
 export default Herbs;

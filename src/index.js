@@ -6,14 +6,13 @@ import reportWebVitals from './reportWebVitals';
 import Vegetable from'./components/vegetable';
 import Herbs from './components/herbs';
 import Fruits from './components/fruits';
+import Cart from './components/cart';
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 
-const handleclick = (item) =>{
-  console.log(item);
-}
+
 
 const router = createBrowserRouter([
   {
@@ -26,12 +25,13 @@ const router = createBrowserRouter([
   },
   {
     path: "fruittt",
-    element: <Fruits handleclick={handleclick} />,
+    element: <Fruits  />,
   },
   {
     path: "herbs",
     element: <Herbs />,
   },
+  
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

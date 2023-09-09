@@ -10,6 +10,7 @@ const list = [
       id: 2,
       title: "Orange (1KG)",
       price: 98,
+      
       img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8M8qrR9SaYcgqcQr3uL2q8PQcDkXs5qOXYPnUlamn2QVeN5kiXLTTuh0t6aOeZeQELf0&usqp=CAU",
       amount: 1,
     },
