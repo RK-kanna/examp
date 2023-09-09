@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import Amazon from './amazon';
-import list from './data';
-import Cards from './cards';
-import Search from "./search";
 import Cart from "./cart";
 import './fruits.css';
+import Search from "./search";
 
 function Fruits() {
     const [show, setShow] = useState(true);
     const [cart, setCart] = useState([]);
-
+//gcytghvikbhuvbiujkbikblnikn
+//ezsmk,l;.'/
+//wesdr[;ok0jk-]
     const handleclick = (item) => {
         let isPresent = false;
         cart.forEach((product) => {
